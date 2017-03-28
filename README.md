@@ -9,6 +9,12 @@
 7. refactor search to work w/ instagr
 
 
+Require.ments
+<!-- At least one API call -->
+A store to hold the data
+Three models with at least one has-many, belongs-to relationship
+One controller per model
+An adapter function to make the API call and parse the data
 
 1000. mvp on click photo from photo wall on page from library that we have that has description in alt tag, search that alt tag in spotify api, palyback give back first song
 

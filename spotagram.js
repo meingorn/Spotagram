@@ -5,12 +5,25 @@
 
 $("document").ready(function() {
 
-    var audio = new Audio();
 
+
+
+
+
+
+
+
+
+
+
+
+
+  // get song from spotify
+
+    var audio = new Audio();
     var songTitle =  $("img").click(function() {
         searchTracks(document.getElementById(this.id).alt);
      });
-
 
    var searchTracks = function(query) {
      $.ajax({
