@@ -37,15 +37,11 @@ $("document").ready(function() {
 
          //doesn't work but hopfully will pause if already playing
                     audio.src = track.preview_url;
-                    if (audio.play()) {
-                      this.addEventListener('click',      function(e) {
-                          audio.pause();
-                        })}
+                    audio.play()
+                  }})
 
-                            else {
-                              audio.play()
-                            }
+        this.addEventListener('click', function() {
+            audio.pause()
 
-                          }})
-
+          })
      }});
