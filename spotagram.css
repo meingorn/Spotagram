@@ -1,5 +1,8 @@
-div {
+/*div.gallery {
   margin: 5px;
+  float: left;
+  width: 50%;
+  height: 40%;
 }
 
 img {
@@ -9,4 +12,39 @@ img {
   margin: 5px;
   width: 30%;
   height: 30%;
+}*/
+
+
+div.gallery:hover {
+    border: .1px solid #000;
+}
+
+div.gallery img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    padding: 0px;
+
+}
+
+div.desc {
+    padding: 0px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 2px;
+    float: left;
+    width: 24.99999%;
+
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
 }
