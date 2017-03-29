@@ -2,11 +2,20 @@
 1.5 find that api in js stuff
 2. create html page(play button) + js file(jquery calls?? api shiz..)
 3.  getting a call to work () -->
+
+
+
+
 4.click again for pause
 5. link up instagram api
 6. css work
   had all the images be the same size
 7. refactor search to work w/ instagr
+
+
+what url do we want
+how are we going to genereate search term to plug into spotify
+somewhere set image id to this .something
 
 
 Require.ments

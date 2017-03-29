@@ -1,4 +1,4 @@
-/*div.gallery {
+div.gallery {
   margin: 5px;
   float: left;
   width: 50%;
@@ -12,9 +12,9 @@ img {
   margin: 5px;
   width: 30%;
   height: 30%;
-}*/
+}
 
-
+/*
 div.gallery:hover {
     border: .1px solid #000;
 }
@@ -47,4 +47,4 @@ div.desc {
     content: "";
     display: table;
     clear: both;
-}
+}*/
