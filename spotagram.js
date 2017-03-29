@@ -3,23 +3,10 @@
 // var s = new Spotify();
 // var spotifyApi = new SpotifyWebApi();
 
-$("document").ready(function() {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   // get song from spotify
 
+$("document").ready(function() {
+    
     var audio = new Audio();
     var songTitle =  $("img").click(function() {
         searchTracks(document.getElementById(this.id).alt);

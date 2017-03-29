@@ -9,6 +9,11 @@
 7. refactor search to work w/ instagr
 
 
+what url do we want
+how are we going to genereate search term to plug into spotify
+somewhere set image id to this .something
+
+
 Require.ments
 <!-- At least one API call -->
 A store to hold the data
