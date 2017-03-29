@@ -2,6 +2,10 @@
 1.5 find that api in js stuff
 2. create html page(play button) + js file(jquery calls?? api shiz..)
 3.  getting a call to work () -->
+
+
+
+
 4.click again for pause
 5. link up instagram api
 6. css work

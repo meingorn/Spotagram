@@ -5,13 +5,14 @@
 
   // get song from spotify
 
-$("document").ready(function() {
-    
+$(document).ready(function() {
+
     var audio = new Audio();
     var songTitle =  $("img").click(function() {
-        searchTracks(document.getElementById(this.id).alt);
-     });
+        // searchTracks(document.getElementById(this.id).alt);
+        alert("sup")
 
+     });
    var searchTracks = function(query) {
      $.ajax({
        url: 'https://api.spotify.com/v1/search',
@@ -22,7 +23,6 @@ $("document").ready(function() {
        success: function (response) {
          var track = response.tracks.items[0];
 
-         //doesn't work but hopfully will pause if already playing
                     audio.src = track.preview_url;
                     audio.play()
                   }})

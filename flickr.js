@@ -11,12 +11,18 @@ $.getJSON(url + "&format=json&jsoncallback=?", function(data){
     $.each(data.photos.photo, function(i,item){
 
         src = "http://farm"+ item.farm +".static.flickr.com/"+ item.server +"/"+ item.id +"_"+ item.secret +"_m.jpg";
+        alt = item.title.replace(/\W/g, ' ')
+        id = item.title.replace(/\W/g, ' ')
         images.push(
-        $("<img/>").attr("src",
-         src));
+        $("<img/>").attr(
+          {"src": src,
+          "alt": alt,
+          "id": id
+        })
+         );
         if ( i == 50 ) return false;
       imageCreator(images)
     });
 
-console.log(images)});
+});
 })
