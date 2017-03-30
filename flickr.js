@@ -11,8 +11,12 @@ $.getJSON(url + "&format=json&jsoncallback=?", function(data){
     $.each(data.photos.photo, function(i,item){
 
         src = "http://farm"+ item.farm +".static.flickr.com/"+ item.server +"/"+ item.id +"_"+ item.secret +"_m.jpg";
-        alt = item.title.replace(/\W/g, ' ')
-        id = item.title.replace(/\W/g, ' ')
+        var altReg = item.title.replace(/\W/g, ' ')
+        var idReg = item.title.replace(/\W/g, ' ')
+
+        alt = makeNice(altReg)
+        id = makeNice(idReg)
+
         images.push(
         $("<img/>").attr(
           {"src": src,
@@ -20,9 +24,19 @@ $.getJSON(url + "&format=json&jsoncallback=?", function(data){
           "id": id
         })
          );
-        if ( i == 50 ) return false;
+        if ( i == 100 ) return false;
       imageCreator(images)
     });
 
 });
 })
+
+  function makeNice(string){
+    var split = string.split(" ")
+    if (split.length > 1){
+      return split.slice(0,1).join("")
+    }
+    else {
+      return split.join(" ")
+    }
+  }
