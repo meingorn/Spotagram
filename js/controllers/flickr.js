@@ -1,7 +1,7 @@
 var flickrImages = []
 audio = new Audio()
 
-$("document").ready(function loadPics() {
+function loadPics() {
   var url = "https://api.flickr.com/services/rest/?method=flickr.interestingness.getList&api_key=1d8d38fe92286045c8cd4e4c48cdf529&safe_search=1&per_page=60"
   $.getJSON(url + "&format=json&jsoncallback=?", function(data) {
     $.each(data.photos.photo, function(i, item){
@@ -16,7 +16,7 @@ $("document").ready(function loadPics() {
       currImg.html.prependTo(".flickrDiv")
     })
   })
-})
+}
 
 function makeNice(string){
   var split = string.split(" ")
