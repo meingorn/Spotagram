@@ -1,1 +1,7 @@
-//maybe l8r
+$(window).load(function() {
+  var songTitle =  $("img").click(function() {
+    searchTracks(document.getElementById(this.id).alt)
+      pauseTrack()
+      })
+      loadMorePics()
+  })

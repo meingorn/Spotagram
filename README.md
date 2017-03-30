@@ -17,6 +17,7 @@ somewhere set image id to this .something
 -->
 
 - pause
+-add border to pics thats being played
 - get store to work
 - add scroll loading http://stackoverflow.com/questions/14035180/jquery-load-more-data-on-scroll
 - bootstrap
