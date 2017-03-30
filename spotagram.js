@@ -1,10 +1,3 @@
-// //setup from spotify walkthrough https://github.com/jmperez/spotify-web-api-js
-// var Spotify = require('spotify-web-api-js');
-// var s = new Spotify();
-// var spotifyApi = new SpotifyWebApi();
-
-  // get song from spotify
-
 $(window).load(function() {
 
     var audio = new Audio();
@@ -21,21 +14,22 @@ $(window).load(function() {
        },
        success: function (response) {
 
+         let track = response.tracks.items[0];
 
-         if (response.tracks.items.length > 0){
-           let track = response.tracks.items[0];
+         if (track !== undefined){
+
            audio.src = track.preview_url;
            audio.play()
          }
           else {
-              alert("SOS")
-            var searchAlbums = function (query) {
+            alert("Choose another photo!")
+            var searchTracksAgain = function (query) {
 
                 $.ajax({
 
                     url: 'https://api.spotify.com/v1/search',
                     data: {
-                        q: "PARTy",
+                        q: "party",
                         type: 'track'
                     },
                     success: function (response) {

@@ -11,11 +11,15 @@ $.getJSON(url + "&format=json&jsoncallback=?", function(data){
     $.each(data.photos.photo, function(i,item){
 
         src = "http://farm"+ item.farm +".static.flickr.com/"+ item.server +"/"+ item.id +"_"+ item.secret +"_m.jpg";
-        var altReg = item.title.replace(/\W/g, ' ')
-        var idReg = item.title.replace(/\W/g, ' ')
+        // var altReg = item.title.replace(/\W/g, ' ')
+        // var idReg = item.title.replace(/\W/g, ' ')
+        var altReg = item.title
+        var idReg = item.title
 
         alt = makeNice(altReg)
         id = makeNice(idReg)
+
+        // check(id, alt)
 
         images.push(
         $("<img/>").attr(
@@ -24,6 +28,9 @@ $.getJSON(url + "&format=json&jsoncallback=?", function(data){
           "id": id
         })
          );
+         //
+        //  check(id, alt)
+         console.log(id);
         if ( i == 100 ) return false;
       imageCreator(images)
     });
@@ -40,3 +47,10 @@ $.getJSON(url + "&format=json&jsoncallback=?", function(data){
       return split.join(" ")
     }
   }
+
+  // function check(id, alt){
+  //   if (id == false) {
+  //     id = "party"
+  //     alt = "party"
+  //   }
+  // }
