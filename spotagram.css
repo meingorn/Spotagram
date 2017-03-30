@@ -19,7 +19,9 @@ img {
   height: 200px;
 }
 
-
+div.gallery img:hover {
+    border: .1px solid #000;
+}
 
 div.gallery img {
     max-width: 90%;
@@ -29,16 +31,19 @@ div.gallery img {
 }
 
 
-
-
 * {
     box-sizing: border-box;
 }
 
 .gallery {
     padding: 0 2px;
-    float: left;
+    float: center;
     width: 24.99999%;
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 
 }
 /*
