@@ -9,10 +9,10 @@ $(window).load(function() {
 
   })
 
-  $(window).scroll(function() {
-
-    if($(window).scrollTop() == $(document).height() - $(window).height()) {
-
-      loadPics()
-    }
-  })
+  // $(window).scroll(function() {
+  //
+  //   if($(window).scrollTop() == $(document).height() - $(window).height()) {
+  //
+  //     loadPics()
+  //   }
+  // })
