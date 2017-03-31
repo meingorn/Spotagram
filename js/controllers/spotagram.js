@@ -16,10 +16,13 @@ function trackWasFound(response) {
 }
 
 function searchTracksAgain(query) {
+  var words = ["party", "Kendrick", "untitled", "bieber", "steven", "savage", "code", "death", "popcorn", "versace", "crank that soulja boi"]
+  var word = words[Math.floor(Math.random()* words.length)];
+
   $.ajax({
     url: 'https://api.spotify.com/v1/search',
     data: {
-      q: "party",
+      q: word,
       type: 'track'
     },
     success: function (response) {

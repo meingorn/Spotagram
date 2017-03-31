@@ -3,6 +3,6 @@ class FlickrImage {
     this.id = id
     this.alt = alt
     this.src = src
-    this.html = $("<img/>").attr({"src": src, "alt": alt, "id": id})
+    this.html = $("<img>").attr({"src": src, "alt": alt, "id": id})
   }
 }
