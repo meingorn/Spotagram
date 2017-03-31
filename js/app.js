@@ -1,4 +1,4 @@
-$(document).ready(loadPics)
+$(document).ready(loadPics())
 
 
 $(window).load(function() {
@@ -8,11 +8,3 @@ $(window).load(function() {
       })
 
   })
-
-  // $(window).scroll(function() {
-  //
-  //   if($(window).scrollTop() == $(document).height() - $(window).height()) {
-  //
-  //     loadPics()
-  //   }
-  // })
