@@ -21,7 +21,6 @@ img {
 
 div.gallery img:hover {
     border: .1px solid #000;
-    cursor: pointer;
 }
 
 div.gallery img {
