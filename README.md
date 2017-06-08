@@ -32,4 +32,6 @@ Require.ments
 
 An interactive photo wall that plays songs correlated to their pictures. Pulled from flickr and spotify apis.
 
+note: live version temporarily not working due to spotify api update. attempting workaround w/o login atm
+
 check it out on: spotagram.herokuapp.com

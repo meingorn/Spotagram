@@ -1,5 +1,15 @@
+
+//auth request
+const client_id = client_id
+const response_type = 'token'
+const redirect_uri = 'https://spotagram.herokuapp.com/'
+
+//needs auth now, attempting to do it without login which may not be an option
 function searchTracks(query) {
   $.ajax({url: 'https://api.spotify.com/v1/search',
+          headers: {
+            'Authorization': 'Bearer ' +
+          }
           data: {q: query, type: 'track'},
           success: function(response) {trackWasFound(response)}
   })
