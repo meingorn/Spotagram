@@ -1,48 +1,36 @@
-//
-// //auth request
-// const client_id = client_id
-// const response_type = 'token'
-// const redirect_uri = 'https://spotagram.herokuapp.com/'
+const client_id = MY_CLIENT_ID
+const client_secret = MY_SECRET
+const credentials = btoa((client_id + ':' + client_secret))
 
-//needs auth now, attempting to do it without login which may not be an option
-const url = "https://accounts.spotify.com/api/token";
-const params = { grant_type: "client_credentials" };
-const auth = "Basic " + authentication;
 
-$.ajax(
-  {
-      method: "POST",
-      url: "https://accounts.spotify.com/api/token",
-      data: {
-        "grant_type": "authorization_code",
-        "code": code,
-        "redirect_uri": myurl,
-        "client_secret": mysecret,
-        "client_id": myid,
-      },
-      sucess: function(result) {
-      url: url,
-      type: 'POST',
-      dataType: 'json',
-      headers: {
-          'Authorization' : auth
-      },
-      data: params,
-        success: function(data) {
-        console.log('success', data);
+function spotifyRequest(query) {
+
+  $.ajax({
+    url: 'https://accounts.spotify.com/api/token',
+    type: 'POST',
+    headers: {
+      "Authorization": 'Basic ' + credentials
+    },
+    data: {
+      grant_type:'client_credentials'
+    }, success: function(response) {
+      searchTracks(response.access_token)
     }
+  });
+
+  function searchTracks(token) {
+    $.ajax({
+      url: 'https://api.spotify.com/v1/search',
+            headers: {
+               'Authorization' : 'Bearer ' + token
+            },
+            data: {q: query, type: 'track'},
+            success: function(response) {trackWasFound(response)}
+    })
   }
-});
-
-function searchTracks(query) {
-  $.ajax({url: 'https://api.spotify.com/v1/search',
-          headers: {
-            'Authorization': 'Bearer ' +
-
-          {data: {q: query, type: 'track'}}},
-          success: function(response) {trackWasFound(response)}
-  })
 }
+
+
 
 function trackWasFound(response) {
   let track = response.tracks.items[0]
